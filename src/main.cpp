@@ -3,6 +3,7 @@
 #include "led.h"
 #include "connection.h"
 #include "time.h"
+#include "song.h"
 
 boolean reveil = false;
 const int buttonInput = 5; // D1
@@ -40,7 +41,6 @@ void loop()
     if (heure != heure_save)
     {
         heure_save = heure;
-
         // if (heure == 950)
         if (heure % 2 == 0)
         {
@@ -48,9 +48,9 @@ void loop()
             Serial.println("reveil declanché !");
         }
     }
-
     if (reveil)
     {
         clignoter_led();
+        starwars_song();
     }
 }

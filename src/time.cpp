@@ -88,5 +88,5 @@ void display_time(uint16_t hour)
 
     display.showNumberDec(hour, true);
     display.showNumberDecEx(hour, (0xf0), true);
-    delay(1000);
+    // delay(1000);
 }
